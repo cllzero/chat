@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thmeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet"  href="css/style.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/mdui/0.2.1/css/mdui.min.css">
+</head>
+
+
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-indigo">
+    <!-- 头部 -->
+    <header class="mdui-appbar mdui-appbar-fixed" id="content-header">
+        <div class="mdui-toolbar mdui-color-theme">
+            <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#content-drawer', swipe: true}"><i class="mdui-icon material-icons">menu</i></span>
+            <a href="" class="mdui-typo-headline mdui-hidden-xs">个人主页</a>
+            <a href="" class="mdui-typo-title" name="username" th:text="${session.loginuser}">SOLA</a>
+            <div class="mdui-toolbar-spacer">
+
+            </div>
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">refresh</i></a>
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">more_vert</i></a>
+        </div>
+    </header>
+
+    <!-- 侧边栏 -->
+    <div class="mdui-drawer" id="content-drawer">
+        <h6>账号管理</h6>
+        <ul class="mdui-list" mdui-collapse="{accordion: true}" style="max-width: 360px;">
+            <li class="mdui-list-item mdui-ripple"  onclick="window.open('Homepage.html','_self')">
+                <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+                <div class="mdui-list-item-content" >信息管理</div>
+            </li>
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons">dashboard</i>
+                <div class="mdui-list-item-content">Dashboard</div>
+            </li>
+            <li class="mdui-collapse-item mdui-collapse-item-open">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">people</i>
+                    <div class="mdui-list-item-content">聊天</div>
+                </div>
+            </li>
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">device_hub</i>
+                    <div class="mdui-list-item-content">设置</div>
+                    <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                </div>
+                <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    <li class="mdui-list-item mdui-ripple">Overview</li>
+                    <li class="mdui-list-item mdui-ripple">All Traffic</li>
+                    <li class="mdui-list-item mdui-ripple">Direct Traffic</li>
+                    <li class="mdui-list-item mdui-ripple">Search Overview</li>
+                </ul>
+            </li>
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons">shopping_cart</i>
+                <div class="mdui-list-item-content">Ecommerce</div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 内容 -->
+    <div class="mdui-container" id="content-main">
+
+
+            <div class="chat-f">
+                <!--聊天好友状态-->
+                <ul class="mdui-list" style="max-width: 360px;">
+                    <li class="mdui-list-item">
+                        <div class="mdui-list-item-avatar"><img src="//mdui-aliyun.cdn.w3cbus.com/docs/assets/docs/img/avatar1.jpg"/></div>
+                        <div class="mdui-list-item-content">Brendan Lim</div>
+                        <i class="mdui-list-item-icon mdui-icon material-icons">chat_bubble</i>
+                    </li>
+                    <li class="mdui-list-item">
+                        <div class="mdui-list-item-avatar"><img src="//mdui-aliyun.cdn.w3cbus.com/docs/assets/docs/img/avatar2.jpg"/></div>
+                        <div class="mdui-list-item-content">me, Scott, Jennifer</div>
+                        <i class="mdui-list-item-icon mdui-icon material-icons">chat_bubble</i>
+                    </li>
+                    <li class="mdui-list-item">
+                        <div class="mdui-list-item-avatar"><img src="//mdui-aliyun.cdn.w3cbus.com/docs/assets/docs/img/avatar3.jpg"/></div>
+                        <div class="mdui-list-item-content">Grace Ng</div>
+                        <i class="mdui-list-item-icon mdui-icon material-icons">chat_bubble</i>
+                    </li>
+                    <li class="mdui-list-item">
+                        <div class="mdui-list-item-avatar"><img src="//mdui-aliyun.cdn.w3cbus.com/docs/assets/docs/img/avatar4.jpg"/></div>
+                        <div class="mdui-list-item-content">Kerem Suer</div>
+                        <i class="mdui-list-item-icon mdui-icon material-icons">chat_bubble</i>
+                    </li>
+                </ul>
+            </div>
+
+    </div>
+
+    <!-- 尾部 -->
+    <div class="mdui-color-theme" id="content-footer">Copyright</div>
+    <script src="//cdn.bootcss.com/mdui/0.2.1/js/mdui.min.js"></script>
+</body>
+
+</html>

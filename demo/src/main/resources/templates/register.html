@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thmeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="//cdn.bootcss.com/mdui/0.2.1/css/mdui.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+
+<body class="login_bj" >
+
+<div class="zhuce_body">
+    <div class="zhuce_kong">
+        <div class="zc">
+            <div class="bj_bai">
+                <h3>欢迎注册</h3>
+                <form action="register.html" th:action="@{/register}" method="get">
+                    <input name="username" type="text" class="kuang_txt phone" placeholder="用户名">
+
+                    <input name="password" type="text" class="kuang_txt possword" placeholder="密码">
+
+
+                    <div>
+                        <input name="" type="checkbox" value=""><span>已阅读并同意<a href="xieyi.html" target="_blank"><span class="lan">《XXXXX使用协议》</span></a></span>
+                    </div>
+                    <p style="color: red;font-size: 14px" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
+                    <button type="submit" class="btn_zhuce">注册</button>
+
+                </form>
+            </div>
+            <div class="bj_right">
+                <p>使用以下账号直接登录</p>
+                <a href="#" class="zhuce_qq">QQ注册</a>
+                <a href="#" class="zhuce_wb">微博注册</a>
+                <a href="#" class="zhuce_wx">微信注册</a>
+                <p>已有账号？<a href="login.html">立即登录</a></p>
+
+            </div>
+        </div>
+           </div>
+
+</div>
+<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+</body>
+</html>

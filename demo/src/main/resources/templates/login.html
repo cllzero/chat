@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thmeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆</title>
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/mdui/0.2.1/css/mdui.min.css">
+
+</head>
+
+<body class="login_bj" >
+<div class="zhuce_body">
+
+    <div class="zhuce_kong login_kuang">
+        <div class="zc">
+            <div class="bj_bai">
+                <h3>登录</h3>
+                <form  action="login.html" th:action="@{/login}"  method="get">
+                    <input name="username" type="text" class="kuang_txt" placeholder="用户名">
+                    <input name="password" type="text" class="kuang_txt" placeholder="密码">
+                    <p style="font-size: 14px;color: red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
+                    <div>
+                        <a href="repassword.html">忘记密码？</a><input name="" type="checkbox" value="" checked><span>记住我</span>
+                    </div>
+
+                    <button name="" class="btn_zhuce">登陆</button>
+                </form>
+            </div>
+            <div class="bj_right">
+                <p>使用以下账号直接登录</p>
+                <a href="#" class="zhuce_qq">QQ注册</a>
+                <a href="#" class="zhuce_wb">微博注册</a>
+                <a href="#" class="zhuce_wx">微信注册</a>
+                <p>没有账号？<a href="register.html">立即注册</a></p>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<script src="//cdn.bootcss.com/mdui/0.2.1/js/mdui.min.js"></script>
+</body>
+
+</html>
